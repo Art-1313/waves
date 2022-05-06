@@ -1,0 +1,17 @@
+@startuml
+class Solver
+{
+  __ variables __
+  data_init: ndarray
+  desc: set
+  __ methods __
+  solve(self, border_type='tor', deg=1, vis=False)
+  solve_free(self, deg=1, vis=False)
+  __ private metods__
+  _init_(self, data_init, description)
+  _OmegaX_(self, q) -> w1, w2, w3, w4, w5
+  _OmegaInvX_(self, w1, w2, w3, w4, w5) -> q
+  _OmegaY_(self, q) -> w1, w2, w3, w4, w5
+  _OmegaInvY_(self, w1, w2, w3, w4, w5) -> q
+}
+@enduml
